@@ -2,9 +2,11 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
+    padding: 20px; /* Default padding for larger screens */
     background-color: #f4f4f4;
     color: #333;
+    -webkit-text-size-adjust: 100%; /* Prevents iOS text size adjustment */
+    text-size-adjust: 100%;
 }
 
 .container {
@@ -20,24 +22,26 @@ h1 {
     color: #333;
     text-align: center;
     margin-bottom: 30px;
+    font-size: 2.2em; /* Slightly larger for impact */
 }
 
 p {
     text-align: center;
     margin-bottom: 40px;
     color: #666;
+    font-size: 1.1em; /* Slightly larger for readability */
 }
 
 .contact-sections {
     display: flex;
-    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
-    gap: 30px; /* Space between categories */
-    justify-content: center; /* Center categories if there's extra space */
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
 .contact-category {
-    flex: 1; /* Allows sections to grow and shrink */
-    min-width: 300px; /* Minimum width before wrapping */
+    flex: 1;
+    min-width: 300px;
     padding: 20px;
     background-color: #fcfcfc;
     border: 1px solid #eee;
@@ -46,16 +50,17 @@ p {
 }
 
 .contact-category h2 {
-    color: #007bff; /* A nice blue for category titles */
+    color: #007bff;
     border-bottom: 2px solid #007bff;
     padding-bottom: 10px;
     margin-top: 0;
     margin-bottom: 20px;
     text-align: center;
+    font-size: 1.6em; /* Adjust category title size */
 }
 
 .contact-category ul {
-    list-style: none; /* Removes default bullet points */
+    list-style: none;
     padding: 0;
 }
 
@@ -64,29 +69,29 @@ p {
     position: relative;
 }
 
-/* Styling for main category items (e.g., Refund Request) */
 .contact-category > ul > li {
-    font-weight: bold; /* Make main sub-categories bold */
+    font-weight: bold;
     color: #444;
     margin-top: 15px;
     margin-bottom: 5px;
+    font-size: 1.1em; /* Main sub-category font size */
 }
 
-/* Styling for nested list items (specific inquiry types) */
 .contact-category ul ul {
     margin-top: 5px;
     margin-bottom: 10px;
-    padding-left: 20px; /* Indent nested items */
+    padding-left: 20px;
 }
 
 .contact-category ul ul li {
-    font-weight: normal; /* Override bold from parent */
+    font-weight: normal;
     margin-bottom: 8px;
+    font-size: 1em; /* Nested item font size */
 }
 
 .contact-category ul ul li::before {
-    content: "•"; /* Custom bullet for specific inquiries */
-    color: #28a745; /* Green bullet for specific links */
+    content: "•";
+    color: #28a745;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
@@ -101,15 +106,74 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
+    .container {
+        margin: 10px auto; /* Reduce top/bottom margin */
+        padding: 20px; /* Reduce padding slightly */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Smaller on mobile */
+    }
+
+    p {
+        font-size: 1em; /* Slightly smaller on mobile */
+        margin-bottom: 30px;
+    }
+
     .contact-sections {
-        flex-direction: column; /* Stack categories vertically on small screens */
-        align-items: center; /* Center stacked categories */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Slightly less gap between stacked categories */
     }
 
     .contact-category {
-        min-width: unset; /* Remove min-width to allow full width */
-        width: 100%; /* Take full width on small screens */
+        min-width: unset;
+        width: 100%;
+        padding: 15px; /* Reduce padding inside categories */
+    }
+
+    .contact-category h2 {
+        font-size: 1.4em; /* Smaller category titles */
+        padding-bottom: 8px;
+        margin-bottom: 15px;
+    }
+
+    .contact-category > ul > li {
+        font-size: 1.05em; /* Slightly smaller main sub-category font */
+    }
+
+    .contact-category ul ul {
+        padding-left: 15px; /* Slightly less indent for nested items */
+    }
+}
+
+/* Even smaller screens (e.g., very narrow phones) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Minimal body padding */
+    }
+
+    .container {
+        padding: 15px; /* Minimal container padding */
+        margin: 5px auto;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 0.95em;
+        margin-bottom: 20px;
+    }
+
+    .contact-category {
+        padding: 10px; /* Even less padding for very small screens */
+    }
+
+    .contact-category ul ul {
+        padding-left: 10px; /* Even less indent for nested items */
     }
 }
