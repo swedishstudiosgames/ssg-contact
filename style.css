@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.contact-sections {
+    display: flex;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+    gap: 30px; /* Space between categories */
+    justify-content: center; /* Center categories if there's extra space */
+}
+
+.contact-category {
+    flex: 1; /* Allows sections to grow and shrink */
+    min-width: 300px; /* Minimum width before wrapping */
+    padding: 20px;
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.contact-category h2 {
+    color: #007bff; /* A nice blue for category titles */
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-category ul {
+    list-style: none; /* Removes default bullet points */
+    padding: 0;
+}
+
+.contact-category ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Styling for main category items (e.g., Refund Request) */
+.contact-category > ul > li {
+    font-weight: bold; /* Make main sub-categories bold */
+    color: #444;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* Styling for nested list items (specific inquiry types) */
+.contact-category ul ul {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 20px; /* Indent nested items */
+}
+
+.contact-category ul ul li {
+    font-weight: normal; /* Override bold from parent */
+    margin-bottom: 8px;
+}
+
+.contact-category ul ul li::before {
+    content: "•"; /* Custom bullet for specific inquiries */
+    color: #28a745; /* Green bullet for specific links */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-sections {
+        flex-direction: column; /* Stack categories vertically on small screens */
+        align-items: center; /* Center stacked categories */
+    }
+
+    .contact-category {
+        min-width: unset; /* Remove min-width to allow full width */
+        width: 100%; /* Take full width on small screens */
+    }
+}
