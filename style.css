@@ -92,7 +92,7 @@ p {
 }
 
 .contact-category ul ul li::before {
-    content: "\25B6"; /* This renders the right-pointing arrow character */
+    content: "\2192"; /* This renders the right-pointing arrow character */
     color: #28a745; /* Green color for bullets */
     display: inline-block;
     width: 1em;
