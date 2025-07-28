@@ -60,7 +60,7 @@ p {
 }
 
 .contact-category ul {
-    list-style: none;
+    list-style: none; /* Removes default bullet points */
     padding: 0;
 }
 
@@ -69,29 +69,31 @@ p {
     position: relative;
 }
 
+/* Styling for main category items (e.g., Refund Request) */
 .contact-category > ul > li {
-    font-weight: bold;
+    font-weight: bold; /* Make main sub-categories bold */
     color: #444;
     margin-top: 15px;
     margin-bottom: 5px;
     font-size: 1.1em; /* Main sub-category font size */
 }
 
+/* Styling for nested list items (specific inquiry types) */
 .contact-category ul ul {
     margin-top: 5px;
     margin-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 20px; /* Indent nested items */
 }
 
 .contact-category ul ul li {
-    font-weight: normal;
+    font-weight: normal; /* Override bold from parent */
     margin-bottom: 8px;
     font-size: 1em; /* Nested item font size */
 }
 
 .contact-category ul ul li::before {
-    content: "•";
-    color: #28a745;
+    content: ">"; /* Custom bullet for specific inquiries, changed to '>' */
+    color: #28a745; /* Green color for bullets */
     display: inline-block;
     width: 1em;
     margin-left: -1em;
