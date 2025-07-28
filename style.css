@@ -96,6 +96,7 @@ p {
     color: #28a745; /* Green color for bullets */
     display: inline-block;
     width: 1em;
+    font-size: 1em;
     margin-left: -1em;
 }
 
